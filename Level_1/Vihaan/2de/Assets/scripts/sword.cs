@@ -1,0 +1,22 @@
+using UnityEngine;
+
+public class sword : MonoBehaviour
+{
+    private Animator animator;
+    void Start()
+    {
+        animator = GetComponent<Animator>();   
+    }
+
+    void Update()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            animator.SetBool("LeftClick", true);
+        }
+        else
+        {
+            animator.SetBool("LeftClick", false);
+        }
+    }
+}
