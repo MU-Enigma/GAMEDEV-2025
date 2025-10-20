@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1604263610314490786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5757727818331954919}
+  - component: {fileID: 6929728639950992463}
+  m_Layer: 0
+  m_Name: Seed Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5757727818331954919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604263610314490786}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.43791, y: -0.02212, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6929728639950992463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604263610314490786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5f99bb77e88e64fb46e99236d71b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SeedSpawner
+  player: {fileID: 0}
+  seedPrefab: {fileID: 5111296745846846667, guid: 8315be49cdea5fb47851c44dda48c16d, type: 3}
+  mainCamera: {fileID: 0}
+  minActiveSeeds: 15
+  maxActiveSeeds: 50
+  spawnFrequency: 25
+  minSpawnDistance: 2
+  maxSpawnDistance: 15
+  fallHeight: 10
+  fallSpeed: 8
+  fallSpeedVariation: 3
+  horizontalDrift: 0.5
+  forwardBias: 0.8
+  forwardSpawnAngle: 120
+  minSpeedForBias: 0.5
+  minSeedDistance: 5
+  maxSpawnAttempts: 25
+  despawnDistance: 20
+  poolSize: 50
