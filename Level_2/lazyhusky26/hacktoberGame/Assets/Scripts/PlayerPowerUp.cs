@@ -7,7 +7,7 @@ public class PlayerPowerUp : MonoBehaviour
     public Sprite poweredUpSprite;
 
     [Header("Power-Up Settings")]
-    public float powerUpDuration = 5f;
+    public float powerUpDuration = 13f;
 
     [Header("Weapons")]
     public GameObject swordWeapon;
