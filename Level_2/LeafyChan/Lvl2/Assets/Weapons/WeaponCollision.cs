@@ -7,5 +7,9 @@ public class WeaponCollision : MonoBehaviour
         {
             Debug.Log("Player entered");
          }
+        if (other.CompareTag("Weapons"))
+        {
+            Debug.Log("HIT!!");
+         }
     }
 }
