@@ -9,5 +9,9 @@ public class EnemyDie : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (other.CompareTag("Fireball"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -7,7 +7,7 @@ public class FireballSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButtonDown(1))
         {
             Instantiate(Fireball, spawnposition.position, spawnposition.rotation);
         }

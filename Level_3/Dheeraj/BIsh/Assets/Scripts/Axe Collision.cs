@@ -8,7 +8,7 @@ public class AxeCollision : MonoBehaviour
     {
         if (other.CompareTag("Axe"))
         {
-            Debug.Log("Enemy Stabbed");
+            Debug.Log("Enemy Slashed");
             Instantiate(Blood, Hitbox.position, Hitbox.rotation);
         }
     }
