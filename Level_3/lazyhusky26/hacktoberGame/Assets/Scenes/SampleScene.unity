@@ -769,6 +769,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColDetBul
   spr: {fileID: 557561436}
+  Blood: {fileID: 5584996877292439033, guid: 48bcbdb5b41158842a55df8a0e980644, type: 3}
+  Enemy: {fileID: 557561437}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
