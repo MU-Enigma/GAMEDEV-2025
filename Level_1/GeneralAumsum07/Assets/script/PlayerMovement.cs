@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
+    public float runMultiplier = 1.75f;
 
     [Header("Jump Settings")]
     public float jumpForce = 5f;
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerControls controls;
 
     private Vector2 moveInput;
+    private bool isRunning;
 
     private Vector2 lastDirection = Vector2.up;
 
@@ -41,6 +43,11 @@ public class PlayerMovement : MonoBehaviour
         };
         controls.Player.Move.canceled += ctx => moveInput = Vector2.zero;
 
+        // Run input
+        controls.Player.Run.performed += ctx => isRunning = true;
+        controls.Player.Run.canceled += ctx => isRunning = false;
+
+        // Jump input
         controls.Player.Jump.performed += ctx =>
         {
             if (currentState == PlayerState.Normal && zPosition <= 0f)
@@ -69,7 +76,8 @@ public class PlayerMovement : MonoBehaviour
         if (currentState == PlayerState.Normal)
         {
             bool isMoving = moveInput.sqrMagnitude > 0.01f;
-            animator.SetBool("iswalking", isMoving);
+            animator.SetBool("iswalking", isMoving && !isRunning);
+            animator.SetBool("isrunning", isMoving && isRunning);
             if (isMoving)
             {
                 animator.SetFloat("moveX", moveInput.x);
@@ -82,9 +90,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (currentState == PlayerState.Normal)
         {
+            float currentSpeed = isRunning ? moveSpeed * runMultiplier : moveSpeed;
             Vector2 input = moveInput;
             if (input.sqrMagnitude > 1f) input = input.normalized;
-            rb.linearVelocity = input * moveSpeed;
+            rb.linearVelocity = input * currentSpeed;
         }
     }
 }
