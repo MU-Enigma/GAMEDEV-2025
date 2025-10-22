@@ -339,6 +339,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletSpawning
   bulletPrefab: {fileID: 2401141257571678998, guid: b50222a363dda3e4296bb4f29d6e4ced, type: 3}
   firePoint: {fileID: 1512978867}
+  fireSound: {fileID: 8300000, guid: b8e80c8ba7df529478ff2d9fce7eadf3, type: 3}
+  shotsPerSecond: 0.5
   spreadAngle: 15
 --- !u!114 &448595501
 MonoBehaviour:
