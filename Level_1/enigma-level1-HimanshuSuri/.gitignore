@@ -1,0 +1,52 @@
+# =============== #
+# Unity generated #
+# =============== #
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+Thumbs.db
+
+# ============ #
+# Visual Studio / JetBrains #
+# ============ #
+.vs/
+.idea/
+.vscode/
+*.csproj
+*.sln
+*.user
+*.unityproj
+*.suo
+*.tmp
+*.pidb
+*.booproj
+*.svd
+*.opendb
+*.VC.db
+
+# ============ #
+# Build Artifacts #
+# ============ #
+*.apk
+*.aab
+*.app
+*.exe
+*.pdb
+*.mdb
+*.unitypackage
+
+# ============ #
+# Crash and Logs #
+# ============ #
+*.stacktrace
+*.log
