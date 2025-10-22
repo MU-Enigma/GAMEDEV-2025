@@ -209,11 +209,11 @@ GameObject:
   - component: {fileID: 449772925}
   - component: {fileID: 449772924}
   - component: {fileID: 449772926}
-  - component: {fileID: 449772927}
-  - component: {fileID: 449772929}
   - component: {fileID: 449772930}
+  - component: {fileID: 449772931}
+  - component: {fileID: 449772932}
   m_Layer: 8
-  m_Name: sword
+  m_Name: weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,7 +263,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3753825769889500098, guid: a5af0901b11581742ae19c0add2f4f06, type: 3}
+  m_Sprite: {fileID: 1528866632221870030, guid: c0cfc2be9b2e1da4185259941f4cbb4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -282,13 +282,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449772923}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.21684285, w: 0.97620654}
-  m_LocalPosition: {x: 1.53, y: -1.04, z: 0}
-  m_LocalScale: {x: 6.324332, y: 6.324332, z: 6.324332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.83, y: 0.57, z: 0}
+  m_LocalScale: {x: 0.39647236, y: 0.39647236, z: 0.39647236}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1774674758}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 25.047}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &449772926
 Rigidbody2D:
   serializedVersion: 5
@@ -316,38 +316,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &449772927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449772923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 297f5c91bd4105c4f9d3387b9d5a56c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 449772926}
-  rotationAngle: -50
-  swingSpeed: 24
-  returnSpeed: 6
---- !u!114 &449772929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449772923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac021c7be8842b49b85f1a6e2fb9713, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetEnemy: {fileID: 579949738}
-  sword: {fileID: 449772923}
-  speed: 15
-  shakeIntensity: 0.1
 --- !u!60 &449772930
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -385,8 +353,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.008955284, y: 0.01400449}
-    oldSize: {x: 0.44, y: 0.44}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.56, y: 10.08}
     newSize: {x: 0.44, y: 0.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -409,6 +377,68 @@ PolygonCollider2D:
       - {x: 0.23761325, y: 0.13319841}
       - {x: 0.24153107, y: 0.12728783}
   m_UseDelaunayMesh: 0
+--- !u!61 &449772931
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449772923}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.56, y: 10.08}
+    newSize: {x: 0.44, y: 0.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 7.56, y: 10.08}
+  m_EdgeRadius: 0
+--- !u!114 &449772932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449772923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac021c7be8842b49b85f1a6e2fb9713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEnemy: {fileID: 579949738}
+  sword: {fileID: 449772923}
+  speed: 15
+  shakeIntensity: 0.15
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1774674756}
-  speed: 7
+  speed: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
