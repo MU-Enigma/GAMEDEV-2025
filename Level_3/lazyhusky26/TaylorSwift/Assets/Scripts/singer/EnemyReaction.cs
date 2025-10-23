@@ -3,10 +3,10 @@ using System.Collections;
 
 public class EnemyReaction : MonoBehaviour
 {
-    public AudioClip shoutClip;         // assign the shout clip here (AudioClip)
+    public AudioClip shoutClip;
     public float shakeDuration = 1f;
     public float shakeIntensity = 0.2f;
-    public GameObject disappearVFX;     // assign VFX prefab
+    public GameObject disappearVFX;
 
     private bool reacting = false;
     private Vector3 originalPos;
@@ -33,21 +33,16 @@ public class EnemyReaction : MonoBehaviour
             yield return null;
         }
 
-        // Restore position
         transform.position = originalPos;
 
-        // Start playing shout sound 0.2 seconds before disappearing
         if (shoutClip != null)
             PlayShoutSound(shoutClip);
 
-        // Wait 0.2 seconds so shout leads disappearance
         yield return new WaitForSeconds(0.2f);
 
-        // Spawn VFX at current position
         if (disappearVFX != null)
             Instantiate(disappearVFX, transform.position, Quaternion.identity);
 
-        // Destroy enemy immediately
         Destroy(gameObject);
     }
 
