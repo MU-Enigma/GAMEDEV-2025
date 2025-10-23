@@ -854,7 +854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyReaction
   shoutClip: {fileID: 8300000, guid: 3443d63683146bd49a3d0aa5353cf9aa, type: 3}
   shakeDuration: 3.5
-  shakeIntensity: 1
+  shakeIntensity: 0.8
   disappearVFX: {fileID: 5584996877292439033, guid: 48bcbdb5b41158842a55df8a0e980644, type: 3}
 --- !u!1 &583215883 stripped
 GameObject:

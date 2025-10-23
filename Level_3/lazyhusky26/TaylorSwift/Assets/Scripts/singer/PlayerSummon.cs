@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerSummon : MonoBehaviour
 {
-    public GameObject singer;  // Assign the child SingerGuy here in the Inspector
+    public GameObject singer;
 
     void Update()
     {
@@ -10,7 +10,7 @@ public class PlayerSummon : MonoBehaviour
         {
             if (singer != null && !singer.activeSelf)
             {
-                singer.SetActive(true); // show him
+                singer.SetActive(true); 
             }
         }
     }

@@ -9,7 +9,6 @@ public class SingerGuy : MonoBehaviour
 
     void OnEnable()
     {
-        // Start singing when he becomes visible
         if (songAudio == null)
             songAudio = GetComponent<AudioSource>();
 
@@ -21,7 +20,6 @@ public class SingerGuy : MonoBehaviour
 
     IEnumerator SingRoutine()
     {
-        // Broadcast to enemies nearby
         Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, effectRadius);
         foreach (var enemy in enemies)
         {
@@ -30,10 +28,8 @@ public class SingerGuy : MonoBehaviour
                 e.OnHeardSong();
         }
 
-        // Wait until done singing
         yield return new WaitForSeconds(songDuration);
 
-        // Hide again instead of destroying
         gameObject.SetActive(false);
     }
 
