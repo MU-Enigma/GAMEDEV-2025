@@ -4,6 +4,10 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Effects")]
+    public CameraShake cameraShake;
+    public ParticleSystem downDashImpact;
+
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float runMultiplier = 1.75f;
@@ -208,7 +212,19 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTrigger("dash");
 
         float scaledDuration = dashDuration * Mathf.Lerp(1f, maxDashDurationMultiplier, chargePercent);
-        rb.linearVelocity = direction * dashPower;
+
+        // DOWNWARD DASH TWEAK
+        if (direction.y < -0.7f)
+        {
+            scaledDuration *= 0.7f;            // shorter
+            rb.linearVelocity = direction * (dashPower * 0.7f);  // weaker
+            if (downDashImpact != null) downDashImpact.Play();
+            if (cameraShake != null) StartCoroutine(cameraShake.Shake(0.1f, 0.06f)); // lighter shake
+        }
+        else
+        {
+            rb.linearVelocity = direction * dashPower;
+        }
 
         yield return new WaitForSeconds(scaledDuration);
 
