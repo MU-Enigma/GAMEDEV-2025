@@ -25,14 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public float afterImageSpacing = 0.05f;
     private float afterImageTimer;
 
-    // --- UPDATED DUAL GUN SETTINGS ---
-    [Header("Gun Settings")]
-    public Transform gunRight; // Assign the gun that starts in the right hand
-    public Transform gunLeft;  // Assign the gun that starts in the left hand
-    public Vector3 rightHandOffset = new Vector3(0.5f, 0f, 0f); // Offset for the right hand
-    public Vector3 leftHandOffset = new Vector3(-0.5f, 0f, 0f); // Offset for the left hand
-    private bool isFacingRight = true;
-    // --- END UPDATED ---
+    // --- REMOVED: Gun Settings Header ---
+    // --- REMOVED: gunRight, gunLeft, offsets, isFacingRight ---
 
     void Start()
     {
@@ -44,26 +38,7 @@ public class PlayerMovement : MonoBehaviour
         // --- END FIX ---
         originalScale = transform.localScale;
 
-        // --- NEW: Set initial gun positions based on isFacingRight (defaults to true) ---
-        if (gunRight != null)
-        {
-            gunRight.localPosition = rightHandOffset;
-            gunRight.localScale = new Vector3(
-                Mathf.Abs(gunRight.localScale.x), // Ensure positive X scale
-                gunRight.localScale.y,
-                gunRight.localScale.z
-            );
-        }
-        if (gunLeft != null)
-        {
-            gunLeft.localPosition = leftHandOffset;
-            gunLeft.localScale = new Vector3(
-                -Mathf.Abs(gunLeft.localScale.x), // Ensure negative X scale
-                gunLeft.localScale.y,
-                gunLeft.localScale.z
-            );
-        }
-        // --- END NEW ---
+        // --- REMOVED: Initial gun position logic ---
     }
     void Update()
     {
@@ -71,17 +46,12 @@ public class PlayerMovement : MonoBehaviour
         moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput.Normalize();
 
-        // --- UPDATED FLIP LOGIC ---
-        // Check for horizontal movement to flip player and position gun
-        if (moveInput.x > 0.1f && !isFacingRight)
+        // --- RE-ADDED: Simple sprite flip logic ---
+        if (moveInput.x != 0)
         {
-            Flip();
+            sr.flipX = moveInput.x < 0;
         }
-        else if (moveInput.x < -0.1f && isFacingRight)
-        {
-            Flip();
-        }
-        // --- END UPDATED LOGIC ---
+        // --- END ---
 
         if (Input.GetKeyDown(KeyCode.Space) && !isDashing && dashCooldownTimer <= 0f && moveInput.magnitude > 0.1f)
         {
@@ -99,62 +69,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // --- UPDATED Flip() METHOD FOR DUAL GUNS ---
-    void Flip()
-    {
-        isFacingRight = !isFacingRight;
-
-        // Flip the player's sprite
-        sr.flipX = !isFacingRight;
-
-        if (isFacingRight)
-        {
-            // Player is now facing RIGHT.
-            // gunRight goes to right hand, gunLeft goes to left hand.
-            if (gunRight != null)
-            {
-                gunRight.localPosition = rightHandOffset;
-                gunRight.localScale = new Vector3(
-                    Mathf.Abs(gunRight.localScale.x),
-                    gunRight.localScale.y,
-                    gunRight.localScale.z
-                );
-            }
-            if (gunLeft != null)
-            {
-                gunLeft.localPosition = leftHandOffset;
-                gunLeft.localScale = new Vector3(
-                    -Mathf.Abs(gunLeft.localScale.x),
-                    gunLeft.localScale.y,
-                    gunLeft.localScale.z
-                );
-            }
-        }
-        else
-        {
-            // Player is now facing LEFT.
-            // --- UPDATED: Guns stay in their respective hands, just flip scale ---
-            if (gunRight != null)
-            {
-                gunRight.localPosition = rightHandOffset; // Stays in right hand
-                gunRight.localScale = new Vector3(
-                    -Mathf.Abs(gunRight.localScale.x), // Flip scale
-                    gunRight.localScale.y,
-                    gunRight.localScale.z
-                );
-            }
-            if (gunLeft != null)
-            {
-                gunLeft.localPosition = leftHandOffset; // Stays in left hand
-                gunLeft.localScale = new Vector3(
-                    Mathf.Abs(gunLeft.localScale.x), // Flip scale
-                    gunLeft.localScale.y,
-                    gunLeft.localScale.z
-                );
-            }
-        }
-    }
-    // --- END UPDATED ---
+    // --- REMOVED: Flip() method ---
 
     void FixedUpdate()
     {
@@ -206,4 +121,3 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 }
-
