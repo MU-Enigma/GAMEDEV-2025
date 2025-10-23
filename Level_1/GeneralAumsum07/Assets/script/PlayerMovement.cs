@@ -16,12 +16,14 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private PlayerControls controls;
 
     private Vector2 moveInput;
     private bool isRunning;
 
     private Vector2 lastDirection = Vector2.up;
+    private Color baseSpriteColor;
 
     private enum PlayerState { Normal, Jumping }
     private PlayerState currentState = PlayerState.Normal;
@@ -30,6 +32,9 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null) baseSpriteColor = spriteRenderer.color;
+        else baseSpriteColor = Color.white;
         if (rb != null) rb.freezeRotation = true;
 
         controls = new PlayerControls();
@@ -75,6 +80,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (currentState == PlayerState.Normal)
         {
+            if (moveInput.x > 0.01f) spriteRenderer.flipX = false;
+            else if (moveInput.x < -0.01f) spriteRenderer.flipX = true;
+
             bool isMoving = moveInput.sqrMagnitude > 0.01f;
             animator.SetBool("iswalking", isMoving && !isRunning);
             animator.SetBool("isrunning", isMoving && isRunning);
@@ -96,4 +104,5 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = input * currentSpeed;
         }
     }
+
 }
