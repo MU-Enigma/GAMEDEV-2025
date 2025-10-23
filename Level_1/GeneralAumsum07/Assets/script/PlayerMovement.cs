@@ -8,6 +8,11 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float runMultiplier = 1.75f;
 
+    [Header("Dash Settings")]
+    public float dashSpeed = 12f;         
+    public float dashDuration = 0.2f;
+    public float dashCooldown = 1f;
+
     [Header("Jump Settings")]
     public float jumpForce = 5f;
     public float gravity = 9.8f;
@@ -22,10 +27,12 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveInput;
     private bool isRunning;
 
+    private bool canDash = true;
+
     private Vector2 lastDirection = Vector2.up;
     private Color baseSpriteColor;
 
-    private enum PlayerState { Normal, Jumping }
+    private enum PlayerState { Normal, Dashing, Jumping }
     private PlayerState currentState = PlayerState.Normal;
 
     private void Awake()
@@ -51,6 +58,19 @@ public class PlayerMovement : MonoBehaviour
         // Run input
         controls.Player.Run.performed += ctx => isRunning = true;
         controls.Player.Run.canceled += ctx => isRunning = false;
+
+        // Dash input
+        controls.Player.Dash.performed += ctx =>
+        {
+            if (canDash && currentState == PlayerState.Normal)
+            {
+                Vector2 dashDir = moveInput.sqrMagnitude > 0.01f ? moveInput.normalized : lastDirection;
+                spriteRenderer.flipX = dashDir.x < -0.01f;
+                animator.SetFloat("moveX", dashDir.x);
+                animator.SetFloat("moveY", dashDir.y);
+                StartCoroutine(Dash(dashDir));
+            }
+        };
 
         // Jump input
         controls.Player.Jump.performed += ctx =>
@@ -105,4 +125,27 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private bool isDashing() => currentState == PlayerState.Dashing;
+
+    private IEnumerator Dash(Vector2 direction)
+    {
+        currentState = PlayerState.Dashing;
+        canDash = false;
+
+        animator.SetFloat("moveX", direction.x);
+        animator.SetFloat("moveY", direction.y);
+        animator.SetTrigger("dash");
+
+        rb.linearVelocity = direction * dashSpeed;
+
+        yield return new WaitForSeconds(dashDuration);
+
+        rb.linearVelocity = Vector2.zero;
+        currentState = PlayerState.Normal;
+        animator.speed = 1f;
+        if (spriteRenderer != null) spriteRenderer.color = baseSpriteColor;
+
+        yield return new WaitForSeconds(Mathf.Max(0f, dashCooldown - dashDuration));
+        canDash = true;
+    }
 }
