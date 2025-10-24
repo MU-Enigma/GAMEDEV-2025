@@ -13,14 +13,19 @@ using System.Collections; // Required for Coroutines
 ///
 /// This script assumes:
 /// 1. The gun sprites face RIGHT by default.
-/// 2. You will assign the two "firePoint" transforms.
-/// 3. You will assign the "gunRight" and "gunLeft" transforms.
-/// 4. Your 'Bullet' prefab has a 'BulletFiring' script with a 'SetDirection' method.
+/// 2. The bullet prefab faces UP by default (hence the -90f rotation).
+/// 3. You will assign the "firePoint" transforms.
+/// 4. You will assign the "gunRight" and "gunLeft" transforms.
+/// 5. Your 'Bullet' prefab has a 'BulletFiring' script with a 'SetDirection' method.
 /// </summary>
 public class DualPistolController : MonoBehaviour
 {
     [Header("Assets")]
     public GameObject bulletPrefab; // Reference to the bullet prefab
+
+    [Header("Audio")]
+    [Tooltip("Assign an AudioSource component that will play the fire sound.")]
+    public AudioSource fireSoundSource;
 
     [Header("Gun Transforms")]
     [Tooltip("The Transform of the right gun's sprite/object.")]
@@ -32,7 +37,6 @@ public class DualPistolController : MonoBehaviour
     [Tooltip("The transform where bullets spawn from the *left* pistol.")]
     public Transform firePointLeft;
 
-    // --- NEW: Recoil Settings ---
     [Header("Recoil")]
     [Tooltip("How far back the gun kicks on its local X axis.")]
     public float recoilDistance = 0.1f;
@@ -45,7 +49,7 @@ public class DualPistolController : MonoBehaviour
     private float originalYScaleLeft;
     private bool fireFromRightGun = true; // For alternating fire
     
-    // --- NEW: Recoil State ---
+    // --- Recoil State ---
     private Vector3 originalPosRight;
     private Vector3 originalPosLeft;
     private Coroutine recoilCoroutineRight;
@@ -154,6 +158,14 @@ public class DualPistolController : MonoBehaviour
     {
         if (bulletPrefab == null) return;
 
+        // Play the fire sound
+        if (fireSoundSource != null && fireSoundSource.clip != null)
+        {
+            // --- THIS IS THE FIX ---
+            // PlayOneShot plays the clip without cutting off the previous one.
+            fireSoundSource.PlayOneShot(fireSoundSource.clip);
+        }
+
         if (fireFromRightGun)
         {
             // 1. Fire from right
@@ -236,11 +248,10 @@ public class DualPistolController : MonoBehaviour
         Vector2 fireDirection = (mouseWorldPosition - firePoint.position).normalized;
 
         // 3. Calculate Rotation (for the bullet prefab)
-        // (Assumes a RIGHT-facing bullet prefab)
         float angle = Mathf.Atan2(fireDirection.y, fireDirection.x) * Mathf.Rad2Deg;
 
         // 4. Instantiate the Bullet at the correct rotation
-        // This now correctly rotates your RIGHT-facing bullet prefab.
+        // User confirmed -90f is correct for their UP-facing prefab
         GameObject newProjectile = Instantiate(bulletPrefab, firePoint.position, Quaternion.Euler(0, 0, angle - 90f));
 
         // 5. Set the bullet's movement direction
