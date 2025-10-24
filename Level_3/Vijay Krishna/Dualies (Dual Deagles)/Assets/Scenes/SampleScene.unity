@@ -630,6 +630,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7317971796545776345, guid: 595b83e95f0421140860fe5987c30db0, type: 3}
   m_PrefabInstance: {fileID: 8653630597716560975}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1247602551 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -1890094819001290698, guid: 595b83e95f0421140860fe5987c30db0, type: 3}
+  m_PrefabInstance: {fileID: 8653630597716560975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1370212190
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,6 +928,10 @@ PrefabInstance:
       propertyPath: recoilDistance
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 7502177879481125408, guid: 595b83e95f0421140860fe5987c30db0, type: 3}
+      propertyPath: fireSoundSource
+      value: 
+      objectReference: {fileID: 1247602551}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
