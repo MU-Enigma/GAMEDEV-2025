@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: 005961337e934974c809bd9b06cae614
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5413793996549056952
+    second: Light Weapons_0
+  - first:
+      213: 4827973386812910292
+    second: Light Weapons_1
+  - first:
+      213: -1702289557141295173
+    second: Light Weapons_2
+  - first:
+      213: 3309186336408560601
+    second: Light Weapons_3
+  - first:
+      213: 2917763058636929343
+    second: Light Weapons_4
+  - first:
+      213: 1500706579710622089
+    second: Light Weapons_5
+  - first:
+      213: 5827999981262943233
+    second: Light Weapons_6
+  - first:
+      213: -952625050974090773
+    second: Light Weapons_7
+  - first:
+      213: -4181300410011356246
+    second: Light Weapons_8
+  - first:
+      213: -3235079942609912382
+    second: Light Weapons_9
+  - first:
+      213: 5835272904283976291
+    second: Light Weapons_10
+  - first:
+      213: 8913683052097958787
+    second: Light Weapons_11
+  - first:
+      213: -5004935403933694090
+    second: Light Weapons_12
+  - first:
+      213: -5418849352755162901
+    second: Light Weapons_13
+  - first:
+      213: -1179390228693402340
+    second: Light Weapons_14
+  - first:
+      213: -4089058457818589668
+    second: Light Weapons_15
+  - first:
+      213: -5713953533468188183
+    second: Light Weapons_16
+  - first:
+      213: -2053100059858710046
+    second: Light Weapons_17
+  - first:
+      213: 1177856620719710753
+    second: Light Weapons_18
+  - first:
+      213: -7512773461628195455
+    second: Light Weapons_19
+  - first:
+      213: 4756663606614880286
+    second: Light Weapons_20
+  - first:
+      213: -1881886519512942974
+    second: Light Weapons_21
+  - first:
+      213: 2168185100859448417
+    second: Light Weapons_22
+  - first:
+      213: -4004934010357917261
+    second: Light Weapons_23
+  - first:
+      213: 3397883547344664923
+    second: Light Weapons_24
+  - first:
+      213: -5483082704120355373
+    second: Light Weapons_25
+  - first:
+      213: 7749127753349671006
+    second: Light Weapons_26
+  - first:
+      213: 890946005619831275
+    second: Light Weapons_27
+  - first:
+      213: 5492203060377304224
+    second: Light Weapons_28
+  - first:
+      213: 3618706810706585013
+    second: Light Weapons_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Light Weapons_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b9e273d4f8a12b40800000000000000
+      internalID: 5413793996549056952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 179
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dae5023738600340800000000000000
+      internalID: 4827973386812910292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 224
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbf6cb9baa04068e0800000000000000
+      internalID: -1702289557141295173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 179
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3653da0779ced20800000000000000
+      internalID: 3309186336408560601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_4
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 224
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f39bfc8fa0afd7820800000000000000
+      internalID: 2917763058636929343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_5
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 224
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9893eb3eea493d410800000000000000
+      internalID: 1500706579710622089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_6
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 224
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 104392ada1731e050800000000000000
+      internalID: 5827999981262943233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_7
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 224
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be90d88309897c2f0800000000000000
+      internalID: -952625050974090773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 134
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa3f31a3e6909f5c0800000000000000
+      internalID: -4181300410011356246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_9
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 179
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cdbeb0beefaa13d0800000000000000
+      internalID: -3235079942609912382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_10
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 180
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362fe433acd0bf050800000000000000
+      internalID: 5835272904283976291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_11
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 156
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 383f7b85283c3bb70800000000000000
+      internalID: 8913683052097958787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 89
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67781c474c5ea8ab0800000000000000
+      internalID: -5004935403933694090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_13
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 134
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be05ca559316cc4b0800000000000000
+      internalID: -5418849352755162901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_14
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 89
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1db92fe5d6f1afe0800000000000000
+      internalID: -1179390228693402340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_15
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 134
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c169ae35ffeb047c0800000000000000
+      internalID: -4089058457818589668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_16
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 134
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e16a8ef885f3b0b0800000000000000
+      internalID: -5713953533468188183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_17
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 95
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e1d9c39f5ce183e0800000000000000
+      internalID: -2053100059858710046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_18
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 90
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12227522b56985010800000000000000
+      internalID: 1177856620719710753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_19
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 93
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d6bad47544db790800000000000000
+      internalID: -7512773461628195455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e10fe4c2950130240800000000000000
+      internalID: 4756663606614880286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286b5d06e2232e5e0800000000000000
+      internalID: -1881886519512942974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_22
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 0
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c95089cd0f61e10800000000000000
+      internalID: 2168185100859448417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_23
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 45
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b95cb39cbd9b68c0800000000000000
+      internalID: -4004934010357917261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_24
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 44
+        width: 16
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b597f936515b72f20800000000000000
+      internalID: 3397883547344664923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_25
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 44
+        width: 16
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d561dac45d28e3b0800000000000000
+      internalID: -5483082704120355373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_26
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 45
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58278192ae6a8b60800000000000000
+      internalID: 7749127753349671006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_27
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 44
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1f503fba64d5c00800000000000000
+      internalID: 890946005619831275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_28
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 0
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ac3a10a599383c40800000000000000
+      internalID: 5492203060377304224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Weapons_29
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b5e37eebaa383230800000000000000
+      internalID: 3618706810706585013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Light Weapons_0: 5413793996549056952
+      Light Weapons_1: 4827973386812910292
+      Light Weapons_10: 5835272904283976291
+      Light Weapons_11: 8913683052097958787
+      Light Weapons_12: -5004935403933694090
+      Light Weapons_13: -5418849352755162901
+      Light Weapons_14: -1179390228693402340
+      Light Weapons_15: -4089058457818589668
+      Light Weapons_16: -5713953533468188183
+      Light Weapons_17: -2053100059858710046
+      Light Weapons_18: 1177856620719710753
+      Light Weapons_19: -7512773461628195455
+      Light Weapons_2: -1702289557141295173
+      Light Weapons_20: 4756663606614880286
+      Light Weapons_21: -1881886519512942974
+      Light Weapons_22: 2168185100859448417
+      Light Weapons_23: -4004934010357917261
+      Light Weapons_24: 3397883547344664923
+      Light Weapons_25: -5483082704120355373
+      Light Weapons_26: 7749127753349671006
+      Light Weapons_27: 890946005619831275
+      Light Weapons_28: 5492203060377304224
+      Light Weapons_29: 3618706810706585013
+      Light Weapons_3: 3309186336408560601
+      Light Weapons_4: 2917763058636929343
+      Light Weapons_5: 1500706579710622089
+      Light Weapons_6: 5827999981262943233
+      Light Weapons_7: -952625050974090773
+      Light Weapons_8: -4181300410011356246
+      Light Weapons_9: -3235079942609912382
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
