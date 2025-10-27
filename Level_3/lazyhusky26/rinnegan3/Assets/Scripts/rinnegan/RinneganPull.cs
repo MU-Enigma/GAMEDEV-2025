@@ -4,7 +4,7 @@ public class RinneganPull : MonoBehaviour
 {
     [Header("Audio")]
     public AudioClip rinneganActivateSound;
-    public AudioClip swapSound; // Still used for the pull sound
+    public AudioClip swapSound;
     private AudioSource audioSource;
 
     [Header("Cursor Textures")]
@@ -13,8 +13,8 @@ public class RinneganPull : MonoBehaviour
     public Vector2 cursorHotspot = Vector2.zero;
 
     [Header("Pull Settings")]
-    public float pullSpeed = 10f;        // Speed at which the enemy moves toward the player
-    public float stopDistance = 1.5f;    // Distance in front of the player to stop
+    public float pullSpeed = 15f;
+    public float stopDistance = 5f;
 
     private bool rinneganActive = false;
 
@@ -55,7 +55,6 @@ public class RinneganPull : MonoBehaviour
             if (swapSound && audioSource)
                 audioSource.PlayOneShot(swapSound);
 
-            // Start pulling the enemy toward the player
             StartCoroutine(PullEnemy(hit.collider.transform));
         }
 
