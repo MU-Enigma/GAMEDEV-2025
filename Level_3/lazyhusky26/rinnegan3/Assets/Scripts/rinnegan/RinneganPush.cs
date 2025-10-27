@@ -13,11 +13,11 @@ public class RinneganPush : MonoBehaviour
     public Vector2 cursorHotspot = Vector2.zero;
 
     [Header("Push Settings")]
-    public float pushDistance = 5f;   // How far the enemy is flung
-    public float pushSpeed = 15f;     // Speed of the push
+    public float pushDistance = 30f;
+    public float pushSpeed = 15f;
 
     [Header("VFX")]
-    public GameObject hitVFXPrefab;   // Visual effect to spawn when enemy hits a wall
+    public GameObject hitVFXPrefab;
 
     private bool rinneganActive = false;
 
@@ -78,13 +78,11 @@ public class RinneganPush : MonoBehaviour
         {
             Vector2 nextPos = Vector2.MoveTowards(enemy.position, targetPosition, pushSpeed * Time.deltaTime);
 
-            // Check for wall collision using tag
             Collider2D[] colliders = Physics2D.OverlapCircleAll(nextPos, 0.1f);
             foreach (var col in colliders)
             {
                 if (col.CompareTag("Wall"))
                 {
-                    // Spawn VFX at collision point
                     if (hitVFXPrefab)
                         Instantiate(hitVFXPrefab, nextPos, Quaternion.identity);
 
@@ -97,7 +95,6 @@ public class RinneganPush : MonoBehaviour
             yield return null;
         }
 
-        // If enemy didn't hit a wall, destroy after push distance
         Destroy(enemy.gameObject);
     }
 
