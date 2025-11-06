@@ -18,7 +18,7 @@ public class Test : MonoBehaviour{
     public float attackRadius = 1.5f;
     public float attackCooldown = 0.6f;
     private float attackTimer;
-    private bool isAttacking;
+    public bool isAttacking;
     [Header("Animation")]
     private Animator animator;
     [Header("Audio")]
@@ -123,7 +123,7 @@ public class Test : MonoBehaviour{
         
 
             if (animator != null)
-                animator.Play("P_attack");
+                animator.Play("P_Attack");
         }
 
         UpdateAnimationState();

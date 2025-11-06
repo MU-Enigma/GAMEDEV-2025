@@ -5,32 +5,71 @@ public class CollisionDetection : MonoBehaviour
     public GameObject particle;
     public Transform dmgpoint;
 
-    public float life = 5f;
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("bullet"))
         {
-            Debug.Log("Enemy Enter");
             Instantiate(particle, dmgpoint.position, dmgpoint.rotation);
             Destroy(other.gameObject);
-            if (life > 0f){
-                life -= 1f;
-            }
-            else{
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
 
 
         }
+
+        if (other.CompareTag("Orchid") || other.CompareTag("ally"))
+        {
+            Instantiate(particle, dmgpoint.position, dmgpoint.rotation);
+            Destroy(gameObject);
+
+
+        }
+
+        if (other.CompareTag("melee"))
+        {//check if the sword is swinging
+            Sword sword = other.GetComponent<Sword>();
+            if (sword != null)
+            {
+                if (sword.canSwing == false)
+                {
+                    Instantiate(particle, dmgpoint.position, dmgpoint.rotation);
+                    Destroy(gameObject);
+                }
+            }
+        }
+
+        if (other.CompareTag("Player"))
+        {//check if the sword is swinging
+            Test slash = other.GetComponent<Test>();
+            if (slash != null)
+            {
+                if (slash.isAttacking)
+                {
+                    Instantiate(particle, dmgpoint.position, dmgpoint.rotation);
+                    Destroy(gameObject);
+                }
+            }
+        }
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        NukeMissile missile = collision.collider.GetComponent<NukeMissile>();
+        if (missile != null)
+        {
+            Destroy(missile.gameObject);
+        }
     }
     
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnParticleCollision(GameObject other)
     {
         if (other.CompareTag("bullet"))
         {
-            Debug.Log("Enemy leave");
-
-        } 
+            Instantiate(particle, dmgpoint.position, dmgpoint.rotation);
+            Destroy(gameObject);
+        }
     }
+
+
+
 }
